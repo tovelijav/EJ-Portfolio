@@ -65,7 +65,7 @@
 
 </script>
 
-<!-- markup (zero or more items) goes here - Random comment-->
+<!-- markup (zero or more items) goes here >
     <!--HEADER-->
     <div class="page_wrapper" class:menu-open={isMenuOpen}>
     <div class="opacity_filter" 
