@@ -1,9 +1,9 @@
 <!--Este layout se aplica a todas las paginas-->
 <!--Que se encuentren en este directorio-->
-<script>
+<script lang="ts">
 	// logic goes here
     //Import assets
-    import { base } from '$app/paths';
+    import {base} from '$app/paths';
     //global "app.css"
     import "../app.css";
     let author = `${base}/assets/logos/author/EJ-Logo-compressed.svg`;
@@ -31,7 +31,13 @@
     // Close menu when clicking on opacity filter
     const handleOverlayClick = () => {
         if (isMenuOpen) {
+            // Find and trigger the reset button
+            const resetButton = document.querySelector('.cancel_search_button');
+            if (resetButton) {
+                (resetButton as HTMLButtonElement).click();
+            }
             isMenuOpen = false;
+            isMenuFullyOpen = false;
         }
     }
 
@@ -104,8 +110,14 @@
                     </button>
                     <div class="search_container">
                         <form class="search_form">
-                            <input class="search_input" type="text" name="Buscar" autocomplete="off" placeholder="Search...">
-                            <button class="cancel_search_button" type="reset" value="reset" aria-label="Close search">
+                            <input class="search_input" 
+                                   type="text" 
+                                   name="Buscar" 
+                                   autocomplete="off" 
+                                   placeholder="Search...">
+                            <button class="cancel_search_button" 
+                                    type="reset" 
+                                    aria-label="Close search">
                                 <i class='bx bx-x'></i>
                             </button>
                             <button class="search_button" type="submit" aria-label="Search">
@@ -372,12 +384,14 @@
         background-color: hsl(0, 0%, 90%);
         border-radius: .25rem;
         padding: 0.25rem;
-        opacity: 0.2rem;
+        opacity: 0;
         visibility: hidden;
         transform: scale(0.5);
-        transition: opacity 0.3s ease,
-                    visibility 0.3s ease,
-                    transform 0.3s ease;
+        transition: opacity 0.2s ease,
+                    visibility 0.2s ease,
+                    transform 0.2s ease,
+                    bottom 1s ease,
+                    right 1s ease;
         @media only screen and (min-width: 992px) {
             bottom: 6.4rem;
             right: 2.3vw;
