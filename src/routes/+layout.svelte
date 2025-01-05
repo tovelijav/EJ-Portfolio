@@ -289,6 +289,14 @@
         margin-inline: auto;
     }
 
+    input[type="text"],
+    input[type="text"]::-webkit-search-cancel-button,
+    button{
+        -webkit-appearance: none;
+        -moz-appaerance:none;
+        appearance: none;
+    }
+
     .search_input {
         margin-inline: auto;
         width: 48%;
