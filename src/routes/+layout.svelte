@@ -73,7 +73,7 @@
     <div class="opacity_filter" 
          class:active={isMenuOpen}
          class:cursor-active={isMenuFullyOpen}
-         style="--cursor-url: url('{base}/assets/icons/cursor/cursor_opacity.svg')"
+         style="--cursor-url: url('{base}/assets/icons/cursor/cursor_opacity_dashed.svg')"
          on:click={handleOverlayClick}
          on:keydown={e => e.key === 'Escape' && handleOverlayClick()}
          role="button"
