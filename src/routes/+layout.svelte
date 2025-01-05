@@ -344,8 +344,8 @@
 
     .scroll_up_button {
         position: fixed;
-        bottom: 14.7rem;
-        right: 7vw;
+        bottom: 10.7rem;
+        right: 10vw;
         z-index: 2;
         background-color: hsl(0, 0%, 90%);
         border-radius: .25rem;
