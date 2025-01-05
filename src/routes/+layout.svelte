@@ -109,7 +109,7 @@
                                 <i class='bx bx-x'></i>
                             </button>
                             <button class="search_button" type="submit" aria-label="Search">
-                                GO
+                                <text>GO</text>
                             </button>
                         </form>
                     </div>
@@ -279,18 +279,22 @@
     .search_container {
         grid-column: 1 / span 3;
         margin-top: 3rem;
-        width: 100%;
-        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content;
     }
 
     .search_form {
-        display: inline;
+        place-self: center;
         position: relative;
-        margin-inline: auto;
+        text-align: center;
+    }
+    .search_form > * {
+        height: 2.1rem;
+        vertical-align: middle;
     }
 
     .search_input {
-        margin-inline: auto;
         width: 48%;
         color: hsl(0, 0%, 0%);
         padding: 0.5rem;
@@ -304,20 +308,26 @@
     }
 
     .search_input:focus {
-        width: 60%;
         outline-color: transparent;
-    }
-
-    .search_form button, .search_form input {
-        font-weight: 700;
+        width: 80%;
     }
 
     .search_input::placeholder {
         color: hsl(0, 0%, 5%);
     }
 
+    .search_form button, .search_form input {
+        font-weight: 700;
+    }
+
+    .search_form button > * {
+        line-height: 1;
+        vertical-align: middle;
+    }
+
     .search_input:not(:placeholder-shown) + .cancel_search_button {
-        display: inline;
+        display: inline-block;
+        visibility: visible;
     }
 
     .search_container button {
@@ -328,17 +338,21 @@
     }
 
     .cancel_search_button {
+        right: 2.7rem;
         border: transparent 0 none;
 	    background: transparent !important;
         position: absolute;
-        right: 2.5rem;
         padding: 0.4rem 0 !important;
         outline-color: transparent !important;
         display: none;
+        visibility: hidden;
+        -webkit-transition: visibility 0.2s ease;
+        -moz-transition: visibility 0.2s ease;
+        -o-transition: visibility 0.2s ease;
+        transition: visibility 0.2s ease;
     }
 
     .cancel_search_button .bx-x {
-        vertical-align: middle;
         font-size: 1.2rem;
     }
 
