@@ -324,7 +324,7 @@
         color: hsl(0, 0%, 5%);
     }
 
-    .search_input:not(:placeholder-shown) ~ .cancel_search_button {
+    .search_input:not(:placeholder-shown) + .cancel_search_button {
         display: inline;
     }
 
@@ -338,11 +338,14 @@
     .cancel_search_button {
         position: absolute;
         right: 2.5rem;
+        height: fit-content;
+        width: fit-content;
         padding: 0.4rem 0 !important;
         display: none;
     }
 
     .cancel_search_button .bx-x {
+        overflow: hidden;
         vertical-align: middle;
         font-size: 1.2rem;
     }
