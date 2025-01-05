@@ -15,8 +15,7 @@ const config = {
 			fallback: '404.html'
 		}),
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/EJ-Portfolio' : '',
-			assets: process.env.NODE_ENV === 'production' ? '/EJ-Portfolio' : ''
+			base: process.env.NODE_ENV === 'production' ? '/EJ-Portfolio' : ''
 		}
 	}
 };
