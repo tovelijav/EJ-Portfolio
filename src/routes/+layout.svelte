@@ -174,7 +174,7 @@
     }
 
     .opacity_filter.cursor-active {
-        cursor: url({base}/assets/icons/cursor/cursor_opacity.svg), auto;
+        cursor: url({base}/assets/icons/cursor/cursor_opacity.gif), auto;
     }
 
     /*Adding fix to footer*/
