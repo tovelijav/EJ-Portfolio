@@ -2,9 +2,11 @@
 <!--Que se encuentren en este directorio-->
 <script>
 	// logic goes here
+    //Import assets
+    import { base } from '$app/paths';
     //global "app.css"
     import "../app.css";
-    let author = 'assets/logos/author/EJ-Logo-compressed.svg';
+    let author = `${base}/assets/logos/author/EJ-Logo-compressed.svg`;
     // Add state for menu
     let isMenuOpen = false;
     let isFooterVisible = false;
@@ -65,7 +67,7 @@
 
 </script>
 
-<!-- markup (zero or more items) goes here >
+<!-- markup (zero or more items) goes here-->
     <!--HEADER-->
     <div class="page_wrapper" class:menu-open={isMenuOpen}>
     <div class="opacity_filter" 
@@ -172,7 +174,7 @@
     }
 
     .opacity_filter.cursor-active {
-        cursor: url(../assets/icons/cursor/cursor_opacity.svg), auto;
+        cursor: url({base}/assets/icons/cursor/cursor_opacity.svg), auto;
     }
 
     /*Adding fix to footer*/
