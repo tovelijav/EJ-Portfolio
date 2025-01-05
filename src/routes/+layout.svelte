@@ -73,6 +73,7 @@
     <div class="opacity_filter" 
          class:active={isMenuOpen}
          class:cursor-active={isMenuFullyOpen}
+         style="--cursor-url: url('{base}/assets/icons/cursor/cursor_opacity.svg')"
          on:click={handleOverlayClick}
          on:keydown={e => e.key === 'Escape' && handleOverlayClick()}
          role="button"
@@ -174,7 +175,7 @@
     }
 
     .opacity_filter.cursor-active {
-        cursor: url({base}/assets/icons/cursor/cursor_opacity.gif), auto;
+        cursor: var(--cursor-url), auto;
     }
 
     /*Adding fix to footer*/
