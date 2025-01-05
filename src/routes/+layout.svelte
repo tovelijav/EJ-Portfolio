@@ -289,14 +289,6 @@
         margin-inline: auto;
     }
 
-    input[type="text"],
-    input[type="text"]::-webkit-search-cancel-button,
-    button{
-        -webkit-appearance: none;
-        -moz-appaerance:none;
-        appearance: none;
-    }
-
     .search_input {
         margin-inline: auto;
         width: 48%;
@@ -336,16 +328,16 @@
     }
 
     .cancel_search_button {
+        border: transparent 0 none;
+	    background: transparent !important;
         position: absolute;
         right: 2.5rem;
-        height: fit-content;
-        width: fit-content;
         padding: 0.4rem 0 !important;
+        outline: none !important;
         display: none;
     }
 
     .cancel_search_button .bx-x {
-        overflow: hidden;
         vertical-align: middle;
         font-size: 1.2rem;
     }
