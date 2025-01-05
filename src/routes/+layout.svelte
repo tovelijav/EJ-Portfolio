@@ -305,11 +305,17 @@
         -moz-transition: width 0.1s ease-in-out 200ms;
         -o-transition: width 0.1s ease-in-out 200ms;
         transition: width 0.1s ease-in-out 200ms;
+        @media only screen and (min-width: 992px) {
+            width: 58%;
+        }
     }
 
     .search_input:focus {
         outline-color: transparent;
         width: 68%;
+        @media only screen and (min-width: 992px) {
+            width: 80%;
+        }
     }
 
     .search_input::placeholder {
