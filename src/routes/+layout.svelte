@@ -309,7 +309,7 @@
 
     .search_input:focus {
         outline-color: transparent;
-        width: 80%;
+        width: 68%;
     }
 
     .search_input::placeholder {
@@ -325,25 +325,30 @@
         vertical-align: middle;
     }
 
-    .search_input:not(:placeholder-shown) + .cancel_search_button {
-        display: inline-block;
-        visibility: visible;
-    }
-
-    .search_container button {
+    .search_button {
         background-color: hsl(0, 0%, 100%);
         border-radius: 0 0.25rem 0.25rem 0;
         padding: 0.5rem;
         color: hsl(0, 0%, 0%);
     }
 
+    .search_button > * {
+        line-height: 1.2 !important;
+    }
+
+    .search_input:not(:placeholder-shown) + .cancel_search_button {
+        display: inline-block;
+        visibility: visible;
+    }
+
     .cancel_search_button {
-        right: 2.7rem;
+        color: hsl(0, 0%, 0%);
+        right: 3.5rem;
         border: transparent 0 none;
-	    background: transparent !important;
+	    background: transparent;
         position: absolute;
-        padding: 0.4rem 0 !important;
-        outline-color: transparent !important;
+        padding: 0.4rem 0;
+        outline-color: transparent;
         display: none;
         visibility: hidden;
         -webkit-transition: visibility 0.2s ease;
