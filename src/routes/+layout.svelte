@@ -305,7 +305,7 @@
 
     .search_input:focus {
         width: 60%;
-        outline: none;
+        outline-color: transparent;
     }
 
     .search_form button, .search_form input {
@@ -333,7 +333,7 @@
         position: absolute;
         right: 2.5rem;
         padding: 0.4rem 0 !important;
-        outline: none !important;
+        outline-color: transparent !important;
         display: none;
     }
 
@@ -344,8 +344,8 @@
 
     .scroll_up_button {
         position: fixed;
-        bottom: 2.5vw;
-        right: 2.3vw;
+        bottom: 14.7rem;
+        right: 7vw;
         z-index: 2;
         background-color: hsl(0, 0%, 90%);
         border-radius: .25rem;
@@ -356,6 +356,10 @@
         transition: opacity 0.3s ease,
                     visibility 0.3s ease,
                     transform 0.3s ease;
+        @media only screen and (min-width: 992px) {
+            bottom: 6.4rem;
+            right: 2.3vw;
+        }
     }
 
     .scroll_up_button.visible {

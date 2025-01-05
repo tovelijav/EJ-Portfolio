@@ -22,10 +22,10 @@
       display: block;
       background-image: linear-gradient(
           to right,
-          hsl(0, 0%, 40%) 48%,    /* Left border */
-          transparent 48%,         /* Start gap */
-          transparent 52%,         /* End gap */
-          hsl(0, 0%, 40%) 52%     /* Right border */
+          hsl(0, 0%, 40%) calc(50% - max(2rem, 3vw)),    /* Left border */
+          transparent calc(50% - max(2rem, 3vw)),         /* Start gap */
+          transparent calc(50% + max(2rem, 3vw)),         /* End gap */
+          hsl(0, 0%, 40%) calc(50% + max(2rem, 3vw))     /* Right border */
       );
       background-size: 100% 1px;
       background-position: bottom;
