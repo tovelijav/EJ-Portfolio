@@ -285,6 +285,7 @@
     }
 
     .search_form {
+        width: 100%;
         place-self: center;
         position: relative;
         text-align: center;
@@ -295,7 +296,7 @@
     }
 
     .search_input {
-        width: 48%;
+        width: 45%;
         color: hsl(0, 0%, 0%);
         padding: 0.5rem;
         border: none;
@@ -305,17 +306,11 @@
         -moz-transition: width 0.1s ease-in-out 200ms;
         -o-transition: width 0.1s ease-in-out 200ms;
         transition: width 0.1s ease-in-out 200ms;
-        @media only screen and (min-width: 992px) {
-            width: 58%;
-        }
     }
 
     .search_input:focus {
         outline-color: transparent;
-        width: 68%;
-        @media only screen and (min-width: 992px) {
-            width: 80%;
-        }
+        width: 60%;
     }
 
     .search_input::placeholder {
@@ -343,24 +338,26 @@
     }
 
     .search_input:not(:placeholder-shown) + .cancel_search_button {
-        display: inline-block;
         visibility: visible;
+    }
+
+    .search_input:not(:focus) + .cancel_search_button {
+        right: calc(27.5% + 1.2rem);
     }
 
     .cancel_search_button {
         color: hsl(0, 0%, 0%);
-        right: 3.5rem;
+        right: calc(20% + 1.2rem);
         border: transparent 0 none;
-	    background: transparent;
+	    background: hsl(0, 0%, 100%);
         position: absolute;
-        padding: 0.4rem 0;
+        padding: 0;
         outline-color: transparent;
-        display: none;
         visibility: hidden;
-        -webkit-transition: visibility 0.2s ease;
-        -moz-transition: visibility 0.2s ease;
-        -o-transition: visibility 0.2s ease;
-        transition: visibility 0.2s ease;
+        -webkit-transition: right 0.1s ease-in-out 200ms, visibility 0.1s ease;
+        -moz-transition: right 0.1s ease-in-out 200ms, visibility 0.1s ease;
+        -o-transition: right 0.1s ease-in-out 200ms, visibility 0.1s ease;
+        transition: right 0.1s ease-in-out 200ms, visibility 0.1s ease;
     }
 
     .cancel_search_button .bx-x {
@@ -375,7 +372,7 @@
         background-color: hsl(0, 0%, 90%);
         border-radius: .25rem;
         padding: 0.25rem;
-        opacity: 0;
+        opacity: 0.2rem;
         visibility: hidden;
         transform: scale(0.5);
         transition: opacity 0.3s ease,
