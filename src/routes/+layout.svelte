@@ -6,7 +6,7 @@
     import {base} from '$app/paths';
     //global "app.css"
     import "../app.css";
-    let author = `${base}/assets/logos/author/EJ-Logo-compressed.svg`;
+    let author = `${base}/assets/logos/author/EJ-Logo-compressed-edited.svg`;
     // Add state for menu
     let isMenuOpen = false;
     let isFooterVisible = false;
@@ -219,14 +219,14 @@
         height: 2.5rem;
     }
 
-    button {
-        border: none;
-        background: none;
-        cursor: pointer;
-    }
-
     .nav_button {
         justify-self: end;
+        padding: 0;
+    }
+
+    .nav_button .bx-menu {
+        transform: translateX(calc(8px + 0.3rem));
+        padding: 0.3rem;
     }
 
     .nav_close {

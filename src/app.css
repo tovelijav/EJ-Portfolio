@@ -54,3 +54,9 @@ button{
         -moz-appaerance:none;
         appearance: none;
     }
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}

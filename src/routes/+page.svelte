@@ -1,4 +1,4 @@
-<div class="container">
+<main class="page_content">
   <h1>Welcome to SvelteKit</h1>
   <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 
@@ -10,12 +10,12 @@
       Test container
     </p>
   </div>
-</div>
+</main>
 
   
 <style>
 
-    .container {
+    .page_content {
       padding: 2rem 0;
       width: 85%;
       margin: 0 auto;
@@ -30,6 +30,14 @@
       background-size: 100% 1px;
       background-position: bottom;
       background-repeat: no-repeat;
+    }
+    
+    .page_content a {
+      text-decoration: underline;
+    }
+
+    .page_content > * {
+      margin-bottom: 1rem;
     }
 
     .test {
@@ -53,10 +61,6 @@
       font-size: 2rem;
       padding: 2rem;
       background-color: hsla(0, 0%, 16%);
-    }
-
-    .container > * {
-      margin-bottom: 1rem;
     }
 
 </style>
