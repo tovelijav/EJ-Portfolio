@@ -49,37 +49,8 @@ body {
 
 input[type="text"],
 input[type="text"]::-webkit-search-cancel-button,
-button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
-/* Add these styles for your button */
-button {
-    -webkit-tap-highlight-color: transparent !important;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    user-select: none;
-    background-color: transparent;
-}
-
-button:active,
-button:focus,
-button:hover {
-    background-color: transparent;
-    outline: none;
-    -webkit-tap-highlight-color: transparent !important;
-}
-
-/* Specific mobile touch states */
-@media (hover: none) {
-    button,
-    button:active,
-    button:focus-visible {
-        -webkit-tap-highlight-color: transparent !important;
-        background-color: transparent;
-        outline: none;
-        touch-action: manipulation;
+button{
+        -webkit-appearance: none;
+        -moz-appaerance:none;
+        appearance: none;
     }
-}

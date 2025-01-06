@@ -284,10 +284,6 @@
         padding: 5px 0;
     }
 
-    .main_list li a:hover {
-        color: hsl(0, 0%, 70%);
-    }
-
     .search_container {
         grid-column: 1 / span 3;
         margin-top: 3rem;
@@ -408,10 +404,6 @@
         color: hsl(0, 0%, 0%);
     }
 
-    .scroll_up_button:hover {
-        background-color: hsl(0, 0%, 75%);
-    }
-
     footer {
         position: relative;
         width: 100%;
@@ -436,6 +428,15 @@
 
     .footer_content p {
         vertical-align: middle;
+    }
+
+    @media(hover: hover) {
+        .main_list li a:hover {
+            color: hsl(0, 0%, 70%);
+        }
+        .scroll_up_button:hover {
+            background-color: hsl(0, 0%, 75%);
+        }
     }
     
 </style>
