@@ -6,7 +6,7 @@
     import {base} from '$app/paths';
     //global "app.css"
     import "../app.css";
-    let author = `${base}/assets/logos/author/EJ-Logo-compressed-edited.svg`;
+    let author = '${base}/assets/logos/author/EJ-Logo-2-compressed.svg';
     // Add state for menu
     let isMenuOpen = false;
     let isFooterVisible = false;
