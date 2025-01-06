@@ -49,27 +49,32 @@ body {
 
 input[type="text"],
 input[type="text"]::-webkit-search-cancel-button,
-button{
-        -webkit-appearance: none;
-        -moz-appaerance:none;
-        appearance: none;
-    }
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 
 /* Add these styles for your button */
 button {
-    /* Remove default background color */
-    background-color: transparent;
-    /* Remove tap highlight color on mobile devices */
     -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: transparent;
 }
 
-/* Optional: If you still see focus styles in some browsers */
+button:active,
 button:focus {
     background-color: transparent;
     outline: none;
 }
 
-/* Optional: If you want to remove the background when pressed */
-button:active {
-    background-color: transparent;
+/* Specific mobile touch states */
+@media (hover: none) {
+    button:active,
+    button:focus-visible {
+        background-color: transparent;
+        -webkit-appearance: none;
+    }
 }
