@@ -225,7 +225,7 @@
     }
 
     .nav_button .bx-menu {
-        transform: translateX(calc(8px + 0.3rem));
+        transform: translateX(5px);
         padding: 0.3rem;
     }
 
