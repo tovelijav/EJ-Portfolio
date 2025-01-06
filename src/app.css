@@ -65,16 +65,21 @@ button {
 }
 
 button:active,
-button:focus {
-    background-color: transparent;
+button:focus,
+button:hover {
+    background-color: transparent !important;
     outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Specific mobile touch states */
 @media (hover: none) {
+    button,
     button:active,
     button:focus-visible {
-        background-color: transparent;
-        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+        background-color: transparent !important;
+        outline: none;
+        touch-action: manipulation;
     }
 }
